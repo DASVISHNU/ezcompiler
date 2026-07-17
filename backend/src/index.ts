@@ -26,7 +26,7 @@ app.post("/submission",async (req,res)=>{
 
 
 
-    client.lPush("problems",JSON.stringify({userId,code,language}))
+    client.lPush("problems",JSON.stringify({submissionId:response.id,code,language}))
 
     res.json({
         message:"processing",
